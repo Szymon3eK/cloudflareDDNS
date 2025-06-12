@@ -30,7 +30,9 @@ Automatic DDNS client that updates DNS records in Cloudflare based on your curre
    TELEGRAM_BOT_TOKEN=your_bot_token
    CLOUDFLARE_EMAIL=your_email
    CLOUDFLARE_ZONE_ID=your_zone_id
+   CLOUDFLARE_ACCOUNT_ID=your_account_id
    CLOUDFLARE_API_KEY=your_api_key
+   CLOUDFLARE_API_TOKEN=your_token
    ```
 
 3. Dodaj plik `dns.json` z listą nazw rekordów DNS do aktualizacji /  
