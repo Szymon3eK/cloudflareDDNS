@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  cloudflare-ddns:
+    build: .
+    container_name: cloudflare-ddns
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - CLOUDFLARE_ZONE_ID=${CLOUDFLARE_ZONE_ID}
+      - CLOUDFLARE_EMAIL=${CLOUDFLARE_EMAIL}
+      - CLOUDFLARE_API_KEY=${CLOUDFLARE_API_KEY}
+    volumes:
+      - ./dns.json:/app/dns.json:ro
+    restart: unless-stopped
